@@ -57,7 +57,7 @@ module Scale
     end
 
     def to_s
-      green(@bytes[0...offset].bytes_to_hex) + yellow(@bytes[offset..].bytes_to_hex[2..])
+      (@bytes[0...offset].bytes_to_hex).to_s.green + (@bytes[offset..].bytes_to_hex[2..]).to_s.yellow
     end
   end
 end

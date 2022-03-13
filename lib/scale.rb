@@ -61,15 +61,15 @@ module Scale
   end
 end
 
-def green(text)
-  "\033[32m#{text}\033[0m"
-end
-
-def yellow(text)
-  "\033[33m#{text}\033[0m"
-end
-
 class String
+  def green
+    "\033[32m#{self}\033[0m"
+  end
+  
+  def yellow
+    "\033[33m#{self}\033[0m"
+  end
+  
   def upcase_first
     self.sub(/\S/, &:upcase)
   end
